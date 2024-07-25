@@ -1,0 +1,217 @@
+@import "../../public/scss/variables.scss";
+
+header {
+    width: 100vw;
+    color: #494949;
+
+    .nav-superior {
+        background-color: $color-principal;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+
+        .nav-izquierdo {
+            display: flex;
+            align-items: center;
+
+            .nav-logo {
+                display: flex;
+                align-items: center;
+
+                a {
+                    margin: 0 1rem;
+                }
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                padding: 0.5rem;
+                margin-left: 2rem;
+
+                .espacio-trabajo {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        padding: 0 .3rem;
+                        cursor: pointer;
+                    }
+
+                    i {
+                        color: #5A5A5A;
+                        font-size: .6rem;
+                    }
+                }
+
+                .espacio-reciente {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        padding: 0 .4rem;
+                        cursor: pointer;
+                    }
+
+                    i {
+                        color: #5A5A5A;
+                        font-size: .6rem;
+                    }
+                }
+
+                .espacio-marcado {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        padding: 0 .3rem;
+                        cursor: pointer;
+                    }
+
+                    i {
+                        color: #5A5A5A;
+                        font-size: .6rem;
+                    }
+                }
+
+                button {
+                    cursor: pointer;
+                    color: #ffffff;
+                    background-color: $color-acento;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 0.3rem .5rem;
+                    margin-left: 1.5rem;
+                    transition: all.3s;
+                }
+
+                button:hover {
+                    transform: scale(.9);
+                }
+
+                button:active {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .nav-derecho {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .buscador {
+                position: relative;
+                margin: 0 2rem;
+
+                img {
+                    height: 25px;
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    padding: .5rem .3rem .5rem 2.5rem;
+                    transition: all .3s;
+                    font-size: 1rem;
+                }
+            }
+
+            .config {
+                margin-right: 5rem;
+
+                a {
+                    margin: 0 .3rem;
+                }
+            }
+
+            .user-activo {
+                padding: 0 1rem;
+                cursor: pointer;
+
+                img {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: solid 3px $color-acento;
+                }
+            }
+        }
+    }
+
+    .nav-inferior {
+        background-color: $color-fuente;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-inferior-izq {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-right: 2rem;
+            }
+
+            .bxs-star{
+                color: #5A5A5A;
+                margin-right: 0.8rem;
+                cursor: pointer;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                padding: .3rem .5rem;
+                background-color: $color-secundario;
+                color: #ffffff;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+
+                img {
+                    height: 0.8rem;
+                    margin-right: .8rem;
+                }
+                .bx{
+                    margin-left: .8rem;
+                }
+            }
+        }
+
+        .nav-inferior-der {
+            display: flex;
+            align-items: center;
+
+            .avatars{
+                display: flex;
+                align-items: center;
+                img {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: solid 1px $color-acento;
+                    margin: -.2rem;
+                }
+            }
+            .btn-compartir{
+                color: #ffffff;
+                background-color: $color-principal;
+                border: none;
+                border-radius: 5px;
+                padding: 0.5rem;
+            }
+
+        }
+    }
+}
