@@ -2,6 +2,7 @@
 
 header {
     width: 100vw;
+    height: 70px;
     color: #494949;
 
     .nav-superior {
@@ -153,6 +154,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: #757575;
 
         .nav-inferior-izq {
             display: flex;
@@ -163,7 +165,7 @@ header {
             }
 
             .bxs-star{
-                color: #5A5A5A;
+                color: #757575;
                 margin-right: 0.8rem;
                 cursor: pointer;
             }
@@ -192,24 +194,57 @@ header {
             display: flex;
             align-items: center;
 
+            .bxs-rocket{
+                padding: 0.5rem;
+            }
+            .bxs-bolt{
+                padding: 0.5rem;
+            }
+            
+            p{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                .bx-filter{
+                    padding: 0 .5rem;
+                    margin-left: 1rem;
+                }
+                .bxs-down-arrow{
+                    font-size: .6rem;
+                    padding: 0 .5rem;
+                }
+            }
             .avatars{
                 display: flex;
                 align-items: center;
+                padding: 0 2rem;
                 img {
-                    height: 2.5rem;
-                    width: 2.5rem;
+                    height: 2.3rem;
+                    width: 2.3rem;
                     object-fit: cover;
                     border-radius: 50%;
-                    border: solid 1px $color-acento;
                     margin: -.2rem;
                 }
             }
             .btn-compartir{
+                display: flex;
+                align-items: center;
                 color: #ffffff;
-                background-color: $color-principal;
+                background-color: $color-secundario;
                 border: none;
-                border-radius: 5px;
-                padding: 0.5rem;
+                border-radius: 8px;
+                padding: 0.2rem 1rem;
+                cursor: pointer;
+                .bx-user-plus{
+                    margin-right: .3rem;
+                    font-size: 1.5rem;
+                }
+            }
+            .bx-dots-horizontal-rounded{
+                color: $color-secundario;
+                font-size: 1.5rem;
+                padding: 0 .5rem;
+                cursor: pointer;
             }
 
         }
