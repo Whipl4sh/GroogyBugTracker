@@ -14,5 +14,3 @@ function menuLateral() {
     asideMenu.classList.toggle("menu__lateral");
         
 }
-
-

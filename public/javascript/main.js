@@ -6,4 +6,6 @@ document.addEventListener("DOMContentLoaded",
       .then(data => {
         document.getElementById('header-container').innerHTML = data;
       });
-  });
+    
+  }
+);

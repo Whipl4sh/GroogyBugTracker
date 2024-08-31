@@ -1,0 +1,70 @@
+.nav-calendario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    .nav-calendario-izq,
+    .nav-calendario-der {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            margin-right: 15px;
+            color: #90AF92;
+        }
+
+        input {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #90AF92;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #90AF92;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &.crear-evento {
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &.dropdown {
+                position: relative;
+
+                &::after {
+                    content: "▼";
+                    font-size: 10px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .nav-calendario-der {
+        .mes-control {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .mes-indicador {
+            font-size: 16px;
+            margin-right: 10px;
+            color: #90AF92;
+        }
+
+        .boton-extra {
+            margin-right: 10px;
+        }
+    }
+}

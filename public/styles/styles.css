@@ -1,10 +1,11 @@
+@charset "UTF-8";
 header {
   width: 100vw;
   height: 70px;
   color: #494949; }
   header .nav-superior {
     background-color: #A3C8A5;
-    padding: 0.5rem;
+    padding: 1.2rem 0.5rem;
     display: flex;
     justify-content: space-between; }
     header .nav-superior .nav-izquierdo {
@@ -101,7 +102,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #757575; }
+    color: #757575;
+    margin-left: 75px; }
     header .nav-inferior .nav-inferior-izq {
       display: flex;
       align-items: center; }
@@ -151,7 +153,8 @@ header {
           width: 2.3rem;
           object-fit: cover;
           border-radius: 50%;
-          margin: -.2rem; }
+          margin: -.2rem;
+          border: solid 1px #0000003c; }
       header .nav-inferior .nav-inferior-der .btn-compartir {
         display: flex;
         align-items: center;
@@ -169,6 +172,60 @@ header {
         font-size: 1.5rem;
         padding: 0 .5rem;
         cursor: pointer; }
+
+.nav-calendario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem; }
+  .nav-calendario .nav-calendario-izq,
+  .nav-calendario .nav-calendario-der {
+    display: flex;
+    align-items: center; }
+    .nav-calendario .nav-calendario-izq h3,
+    .nav-calendario .nav-calendario-der h3 {
+      margin-right: 15px;
+      color: #90AF92; }
+    .nav-calendario .nav-calendario-izq input,
+    .nav-calendario .nav-calendario-der input {
+      padding: 5px;
+      margin-right: 10px;
+      border: 1px solid #90AF92;
+      border-radius: 5px; }
+    .nav-calendario .nav-calendario-izq button,
+    .nav-calendario .nav-calendario-der button {
+      background-color: #90AF92;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer; }
+      .nav-calendario .nav-calendario-izq button.crear-evento,
+      .nav-calendario .nav-calendario-der button.crear-evento {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .nav-calendario .nav-calendario-izq button.dropdown,
+      .nav-calendario .nav-calendario-der button.dropdown {
+        position: relative; }
+        .nav-calendario .nav-calendario-izq button.dropdown::after,
+        .nav-calendario .nav-calendario-der button.dropdown::after {
+          content: "▼";
+          font-size: 10px;
+          margin-left: 5px; }
+  .nav-calendario .nav-calendario-der .mes-control {
+    font-size: 18px;
+    margin-right: 10px; }
+  .nav-calendario .nav-calendario-der .mes-indicador {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #90AF92; }
+  .nav-calendario .nav-calendario-der .boton-extra {
+    margin-right: 10px; }
 
 * {
   padding: 0;
