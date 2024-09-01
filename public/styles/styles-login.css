@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --white1:#FFFFFF;
+    --white2:#f0f2f5;
+    --green1:#369A41;
+    --green2:#D9E9DA;   
+    --green3:#90AF92;
+    --green4:#607E62;
+    --green5:#0A971A;
+    --oranje1:#EC3908;
+    --gray1:#D9D9D9;
+    --gray2:#757575;
+    --gray3:#5A5A5A;
+    --gray4:#323232;
+    --fw400: 600;
+    --fs20: 20px;
+    --fs15:15px;
+}
+/*
+body{
+    background-color: var(--gray4);
+}*/
+dialog{
+    -webkit-box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    border: none;
+}
+.formLogIn, .formRegister{
+    border-radius: 10px;
+    width: 600px;
+    gap: 20px;
+}
+
+
+.formRegister > div, .formLogIn > div {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.formRegister > div > label, .formLogIn > div > label{
+    font-size: var(--fs20);
+    font-weight: var(--fw400);
+}
+
+.formLogIn, .formRegister{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 90px;
+}
+
+.formRegister .buttons-container, .formLogIn .buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.formRegister .buttons-container .button-social-mobile, .formLogIn .buttons-container .button-social-mobile{
+    display: none;
+}
+
+.button{
+    border-radius: 10px;
+    border: solid 1px var(--gray2);
+    color: var(--gray2);
+    padding: 15px 40px;
+    font-size: var(--fs15) ;
+}
+.formLogIn .button-social, .formRegister .button-social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-weight: var(--fw400);
+    background-color: var(--white1);
+    border-color: var(--gray2);
+}
+
+button.button-social:hover{
+    background-color: var(--gray4);
+    color: var(--white1);
+    border-color: var(--green1);
+}
+button.button-social:hover .img-github{
+    filter: invert(1);
+}
+.button-add{
+    color: var(--white1);
+    background-color: var(--green3);
+}
+.button-add:hover{
+    background-color: var(--green4);
+}
+.button-cancel{
+    color: var(--gray4);
+    background-color: var(--gray1);
+}
+.button-cancel:hover{
+    color: var(--white1);
+    background-color: var(--gray3);
+}
+
+input{
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: var(--green4);
+}
+input:focus{
+    border: 2px solid;
+    border-color: var(--green5);
+}
+
+
+@media (max-width: 700px){
+    .formLogIn, .formRegister {
+        padding: 20px 10px;
+    }
+    .formRegister .buttons-container, .formLogIn .buttons-container {
+        flex-wrap: wrap;
+    }
+    button.button-social{
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 600px){
+    .formRegister .buttons-container .button-social-mobile, .formLogIn .buttons-container .button-social-mobile{
+        display:flex;
+        background-color: var(--white1);
+    }
+    .formRegister .buttons-container .button-social, .formLogIn .buttons-container .button-social{
+        display: none;
+    }
+}
+
+@media (max-width: 450px){
+    .formRegister .buttons-container, .formLogIn .buttons-container{
+        display:flex;
+    }
+    .formRegister .buttons-container .button-social-mobile, .formLogIn .buttons-container .button-social-mobile{
+        display: flex;
+        padding: 10px 20px;
+    }
+    .button-add, .button-cancel{
+        width: 100%;
+    }
+}

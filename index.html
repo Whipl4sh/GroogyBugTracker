@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../public/styles/styles-login.css">
+    <!-- box-icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Groovy</title>
+</head>
+
+<body>
+    <button class="button" id="btn-login">Conectarse</button>
+    <button class="button" id="btn-register">Registrarse</button>
+    <dialog id="popup-login">
+        <form action="" method="get" class="formLogIn">
+            <div class="buttons-container">
+                <button class="button button-social"><img src="/public/images/google.png" alt="">Google</button>
+                <button class="button button-social"><img src="/public/images/microsoft.png" alt="">Microsoft</button>
+                <button class="button button-social"><img class="img-github" src="/public/images/github.png" alt="">Github</button>
+                <button class="button button-social-mobile"><img src="/public/images/google.png" alt=""></button>
+                <button class="button button-social-mobile"><img src="/public/images/microsoft.png" alt=""></button>
+                <button class="button button-social-mobile"><img class="img-github" src="/public/images/github.png" alt=""></button>
+            </div>
+            <div>
+                <label for="emailLogIn">Correo</label>
+                <input type="email" name="emailLogIn" id="emailLogIn" placeholder="ejemplo@gmail.com" required autocomplete="email">
+            </div>
+            <div>
+                <label for="passwordLogIn" placeholder="ingresa tu contraseña">Contraseña</label>
+                <input type="password" name="passwordLogIn" id="passwordLogIn" required autocomplete="current-password">
+            </div>
+            <div class="buttons-container">
+                <button class="button button-add" type="submit" value="Log In">Ingresar</button>
+                <button class="btn-close-dialog button button-cancel" type="reset">Cancelar</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="popup-register" >
+        <form action="" method="get" class="formRegister">
+            <div class="buttons-container">
+                <button class="button button-social"><img src="/public/images/google.png" alt="">Google</button>
+                <button class="button button-social"><img src="/public/images/microsoft.png" alt="">Microsoft</button>
+                <button class="button button-social"><img class="img-github" src="/public/images/github.png" alt="">Github</button>
+                <button class="button button-social-mobile"><img src="/public/images/google.png" alt=""></button>
+                <button class="button button-social-mobile"><img src="/public/images/microsoft.png" alt=""></button>
+                <button class="button button-social-mobile"><img class="img-github" src="/public/images/github.png" alt=""></button>
+            </div>
+            <div>
+                <label for="nameRegister">Nombre</label>
+                <input type="text" name="nameRegister" id="nameRegister"
+                placeholder="Julieta" required autocomplete="name">
+            </div>
+            <div>
+                <label for="surnameRegister">Apellido</label>
+                <input type="text" name="surnameRegister" id="surnameRegister"
+                placeholder="Suarez" required>
+            </div>
+            <div>
+                <label for="emailRegister">Correo</label>
+                <input type="email" name="emailRegister" id="emailRegister"
+                placeholder="ejemplo@gmail.com" required autocomplete="email">
+            </div>
+            <div>
+                <label for="passwordRegister">Contraseña</label>
+                <input type="password" name="passwordRegister" id="passwordRegister"
+                placeholder="Contraseña12!" required autocomplete="current-password">
+            </div>
+            <div class="buttons-container">
+                <button class="button button-add" type="submit" value="Register">Registrar</button>
+                <button class="btn-close-dialog button button-cancel" type="reset">Cancelar</button>
+            </div>
+        </form>
+    </dialog>
+
+
+    <script src="../public/javascript/login.js"></script>
+</body>
+
+</html>
