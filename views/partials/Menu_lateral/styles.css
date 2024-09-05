@@ -1,0 +1,221 @@
+<<<<<<< HEAD
+=======
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+/* menu lateral*/
+
+main{
+   margin-left: 75px;
+   color: #FFFFFF;
+   display: flex;
+
+}
+
+
+aside {
+   background:#A3C8A5; 
+   width: 75px;
+   height: auto;
+   font-size: 1rem;
+   text-align: center;
+   position: absolute;
+   font-family: "Inter", sans-serif;
+   left: 0;
+   top: 75px;
+}
+
+.opciones {
+    margin-top: 40px;
+}
+
+ul{
+    line-height: 3;
+    text-align: center;
+    padding: 20px 0;
+    align-items: center;
+       
+}
+
+
+ul li {
+    width: 64px;
+    height: 40px;
+    font-size: 1rem;
+    border: none;
+    margin: 30px auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    
+}
+
+ul li a {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    flex-wrap: nowrap;
+    color: transparent;
+}
+
+
+ul li:hover {
+background: #90af92e6;
+height: 40px;
+
+
+}
+
+
+li img,
+li .bx {
+   width: 1.3rem; 
+   font-size: 1.7rem;
+   align-items: center;
+   margin-left: 15px;
+   color: #FFFFFF;
+   text-align: center;
+}
+
+
+
+.parrafo{
+  
+    display: none;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+ 
+
+.perfil {
+    display: flex;
+    align-items: center;
+    padding: 40px 0 0 5px;
+    justify-content: space-evenly;
+    display: none;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.perfil h2 {
+    font-size: 0.9rem;
+    
+}
+
+
+.perfil .usuario {
+    width: 50px;
+    width: 50px;
+}
+
+ 
+.flecha {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    right: -8px;
+    top: 10px;
+    border-radius: 100%;
+    border: none;
+    background: transparent;
+    
+}
+
+.opciones {
+    list-style: none;
+
+}
+
+
+
+
+/* clases imaginarias creadas para js */
+
+.body__move {
+    margin-left: 215px;
+}
+
+.menu__lateral {
+    width: 215px;
+    position: absolute;
+    left: 0;
+   
+
+    .nav-inferior {
+        width: calc(100%-215px);
+
+    }
+    
+   .perfil {
+    display: flex;
+ 
+   
+   }
+
+   .flecha {
+    transform: rotatez(90deg);
+    right: -15px;
+    top: -3px;
+
+   }
+
+   ul {
+    margin-bottom: 35px;
+   }
+
+   ul li a {
+
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+
+ }
+
+  ul li {
+    background: #90af92c7;
+    width: 200px;
+    margin: 10px auto;
+    align-items: center;
+
+  }
+
+  ul li:hover {
+    background: #678e69;
+  
+  }
+
+
+   .parrafo {
+    
+    display: flex;
+    margin: -20px 0 -5px 10px;
+    text-align: left;
+   }
+
+   .final {
+    margin-top: 50px;
+   }
+    
+  
+
+   li img,
+   li .bx {
+    margin:auto 9px; 
+    text-align: center;
+ }
+
+ .opciones {
+    margin-top: 30px;
+ }
+
+}
+>>>>>>> 91faa5e55b88c38d9fe0a2be6e0f69ec8efdef76
