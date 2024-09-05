@@ -1,8 +1,8 @@
 
 
 //menú lateral
-const asideMenu = document.querySelector("#menu");
 const boton = document.querySelector("#boton");
+const asideMenu = document.querySelector("#menu");
 const body = document.querySelector("#body");
 const navbar= document.querySelector("#navbar");
 

@@ -7,7 +7,7 @@ header {
 
     .nav-superior {
         background-color: $color-principal;
-        padding: 1.2rem 0.5rem;
+        padding: .6rem 0.5rem;
         display: flex;
         justify-content: space-between;
 
@@ -155,7 +155,7 @@ header {
         align-items: center;
         justify-content: space-between;
         color: #757575;
-        margin-left: 75px;
+        margin-left: 60px;
         
 
         .nav-inferior-izq {
@@ -164,23 +164,24 @@ header {
 
             p {
                 margin-right: 2rem;
-                
+                font-weight: bold;
             }
 
             .bxs-star{
                 color: #757575;
                 margin-right: 0.8rem;
                 cursor: pointer;
+                font-size: .9rem;
             }
 
             button {
                 display: flex;
                 align-items: center;
-                padding: .3rem .5rem;
+                padding: .1rem .6rem;
                 background-color: $color-secundario;
                 color: #ffffff;
                 border: none;
-                border-radius: 6px;
+                border-radius: 4px;
                 cursor: pointer;
 
                 img {
@@ -189,6 +190,7 @@ header {
                 }
                 .bx{
                     margin-left: .8rem;
+                    font-size: .4rem;
                 }
             }
         }
@@ -208,6 +210,7 @@ header {
                 cursor: pointer;
                 display: flex;
                 align-items: center;
+                font-size: .8rem;
                 .bx-filter{
                     padding: 0 .5rem;
                     margin-left: 1rem;

@@ -1,6 +1,7 @@
 @import "./variables.scss";
 @import "../../views/partials/header/header.scss";
 @import "../../views/partials/calendario/calendario.scss";
+@import "../../views/partials/Menu_lateral/menu_lateral.scss";
 
 
 *{
@@ -8,6 +9,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: $fuente-principal;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
