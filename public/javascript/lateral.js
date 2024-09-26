@@ -7,7 +7,7 @@ function iniciarMenuLateral() {
     if (boton) {
         boton.addEventListener("click", menuLateral);
     } else {
-        console.log('esta todo mal')
+        console.log('esta todo mal jaja')
     }
 
     function menuLateral() {
