@@ -1,4 +1,7 @@
+
+
 document.addEventListener("DOMContentLoaded", async function () {
+
   try {
     const response = await fetch('../views/partials/Menu_lateral/menu_lateral.html');
     const data = await response.text();
