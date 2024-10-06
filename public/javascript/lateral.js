@@ -1,24 +1,21 @@
 function iniciarMenuLateral() {
     const asideMenu = document.querySelector("#aside-container");
     const boton = document.getElementById('boton')
-    const body = document.querySelector("#body");
-    const navbar = document.querySelector("#navbar");
+    const menu = document.querySelector(".menu-lateral");
+    const navbar = document.querySelector(".nav-inferior-izq");
 
-    if (boton) {
-        boton.addEventListener("click", menuLateral);
-    } else {
-        console.log('esta todo mal jaja')
-    }
+    boton.addEventListener("click", menuLateral);
 
     function menuLateral() {
-        if (body) {
-            body.classList.toggle("body__move");
+        if (menu) {
+            menu.classList.toggle("menu-move");
         }
         if (navbar) {
-            navbar.classList.toggle("body__move");
+            navbar.classList.toggle("nav-move");
         }
         if (asideMenu) {
-            asideMenu.classList.toggle("menu__lateral");
+            asideMenu.classList.toggle("menu-move");
         }
+       
     }
 };

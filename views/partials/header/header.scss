@@ -2,12 +2,11 @@
 
 header {
     width: 100vw;
-    height: 70px;
     color: #494949;
 
     .nav-superior {
         background-color: $color-principal;
-        padding: .6rem 0.5rem;
+        padding: .4rem 0.5rem;
         display: flex;
         justify-content: space-between;
 
@@ -150,17 +149,17 @@ header {
 
     .nav-inferior {
         background-color: $color-fuente;
-        padding: 1rem;
+        padding: .6rem 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         color: #757575;
-        margin-left: 60px;
-        
+        margin-left: 60px;        
 
         .nav-inferior-izq {
             display: flex;
             align-items: center;
+            transition: all .3s;
 
             p {
                 margin-right: 2rem;
@@ -193,6 +192,9 @@ header {
                     font-size: .4rem;
                 }
             }
+        }
+        .nav-move{
+            transform: translateX(150px);
         }
 
         .nav-inferior-der {

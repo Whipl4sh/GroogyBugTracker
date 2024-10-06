@@ -1,11 +1,10 @@
 @charset "UTF-8";
 header {
   width: 100vw;
-  height: 70px;
   color: #494949; }
   header .nav-superior {
     background-color: #A3C8A5;
-    padding: .6rem 0.5rem;
+    padding: .4rem 0.5rem;
     display: flex;
     justify-content: space-between; }
     header .nav-superior .nav-izquierdo {
@@ -98,7 +97,7 @@ header {
           border: solid 3px #369A41; }
   header .nav-inferior {
     background-color: #D9D9D980;
-    padding: 1rem;
+    padding: .6rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,7 +105,8 @@ header {
     margin-left: 60px; }
     header .nav-inferior .nav-inferior-izq {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      transition: all .3s; }
       header .nav-inferior .nav-inferior-izq p {
         margin-right: 2rem;
         font-weight: bold; }
@@ -130,6 +130,8 @@ header {
         header .nav-inferior .nav-inferior-izq button .bx {
           margin-left: .8rem;
           font-size: .4rem; }
+    header .nav-inferior .nav-move {
+      transform: translateX(150px); }
     header .nav-inferior .nav-inferior-der {
       display: flex;
       align-items: center; }
@@ -231,137 +233,142 @@ header {
   .nav-calendario .nav-calendario-der .boton-extra {
     margin-right: 10px; }
 
-main {
-  color: #FFFFFF;
-  display: flex; }
-
-aside {
-  background: #A3C8A5;
+#aside-container {
   width: 60px;
-  height: 100vh;
-  overflow-y: auto;
-  font-size: 1rem;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  top: 60px;
-  /* Estilo para scrollbar */ }
-  aside::-webkit-scrollbar {
-    width: 6px;
-    /* Ancho del scrollbar */ }
-  aside::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px; }
-  aside::-webkit-scrollbar-thumb {
-    background-color: #D9D9D980;
-    border-radius: 10px; }
-  aside::-webkit-scrollbar-thumb:hover {
-    background-color: #90AF92; }
-  aside .perfil {
-    display: flex;
-    align-items: center;
-    padding: 40px 0 0 5px;
-    justify-content: space-evenly;
-    display: none;
+  background: #A3C8A5;
+  margin-top: -60px;
+  /* Despliegue del menu lateral */ }
+  #aside-container .menu-lateral {
     color: #FFFFFF;
-    margin-bottom: 50px; }
-    aside .perfil .usuario {
-      width: 50px;
-      width: 50px; }
-    aside .perfil .perfil h2 {
-      font-size: 0.9rem; }
-  aside .flecha {
-    width: 38px;
-    height: 38px;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    border-radius: 100%;
-    border: none;
-    background: transparent;
-    z-index: 999; }
-  aside .opciones {
-    margin-top: 0px; }
-    aside .opciones ul {
-      line-height: 3;
+    display: flex;
+    width: 60px;
+    height: 100vh;
+    position: relative;
+    transition: all .3s; }
+    #aside-container .menu-lateral .flecha-container {
+      position: absolute;
+      top: 41px;
+      left: 40px;
+      z-index: 999;
+      transition: all .3s; }
+      #aside-container .menu-lateral .flecha-container .desplegar {
+        background: transparent;
+        border: none; }
+        #aside-container .menu-lateral .flecha-container .desplegar .flecha {
+          width: 38px;
+          height: 38px;
+          cursor: pointer;
+          transition: all .3s; }
+    #aside-container .menu-lateral .aside {
+      font-size: 1rem;
       text-align: center;
-      padding: 20px 0;
-      align-items: center; }
-      aside .opciones ul li {
-        width: 64px;
-        height: 40px;
-        font-size: 1rem;
-        border: none;
-        margin: 30px auto;
-        cursor: pointer;
+      position: absolute;
+      left: 0px;
+      top: -51px;
+      width: 60px;
+      overflow: hidden; }
+      #aside-container .menu-lateral .aside .perfil {
         display: flex;
         align-items: center;
-        padding: 0; }
-        aside .opciones ul li a {
-          display: flex;
-          align-items: center;
-          text-align: center;
-          gap: 35px;
-          flex-wrap: nowrap;
-          color: transparent; }
-      aside .opciones ul img,
-      aside .opciones ul .bx {
-        width: 1.3rem;
-        font-size: 1.7rem;
-        align-items: center;
-        margin-left: 15px;
+        justify-content: space-evenly;
         color: #FFFFFF;
-        text-align: center; }
-      aside .opciones ul li:hover {
-        background: #90af92e6;
-        height: 40px; }
-    aside .opciones .parrafo {
-      display: none;
-      margin-top: 25px;
-      font-size: 13px; }
-
-/* AUN NO TOQUE ESTE CODIGO DE BAJO */
-/* clases imaginarias creadas para js */
-.body__move {
-  margin-left: 215px; }
-
-.menu__lateral {
-  width: 215px;
-  position: absolute;
-  left: 0; }
-  .menu__lateral .nav-inferior {
-    width: calc(100%-215px); }
-  .menu__lateral .perfil {
-    display: flex; }
-  .menu__lateral .flecha {
-    transform: rotatez(90deg);
-    right: -15px;
-    top: -3px; }
-  .menu__lateral ul {
-    margin-bottom: 35px; }
-  .menu__lateral ul li a {
-    display: flex;
-    align-items: center;
-    color: #FFFFFF; }
-  .menu__lateral ul li {
-    background: #90af92c7;
+        opacity: 0;
+        transition: all .3s;
+        margin-top: 55px;
+        width: 180px; }
+        #aside-container .menu-lateral .aside .perfil .usuario-img {
+          width: 50px;
+          width: 50px; }
+        #aside-container .menu-lateral .aside .perfil .usuario-nombre {
+          display: flex;
+          flex-direction: column; }
+          #aside-container .menu-lateral .aside .perfil .usuario-nombre p {
+            font-size: 0.7rem;
+            text-align: start; }
+          #aside-container .menu-lateral .aside .perfil .usuario-nombre .nombre {
+            font-size: .9rem; }
+      #aside-container .menu-lateral .aside .opciones {
+        margin-top: 0px;
+        margin-left: 96px;
+        background: #A3C8A5; }
+        #aside-container .menu-lateral .aside .opciones ul {
+          text-align: center;
+          padding: 10px 0;
+          align-items: center;
+          display: flex;
+          flex-direction: column; }
+          #aside-container .menu-lateral .aside .opciones ul li {
+            width: 200px;
+            height: 30px;
+            border: none;
+            margin: 1px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all .3s; }
+            #aside-container .menu-lateral .aside .opciones ul li a {
+              display: flex;
+              gap: 35px;
+              text-align: center;
+              color: #ffffff; }
+              #aside-container .menu-lateral .aside .opciones ul li a img {
+                width: 1rem;
+                margin-left: 26px; }
+              #aside-container .menu-lateral .aside .opciones ul li a .bx {
+                font-size: 1.5rem;
+                align-items: center;
+                margin-left: 22px;
+                color: #FFFFFF; }
+          #aside-container .menu-lateral .aside .opciones ul li:hover {
+            background: #90af92e6; }
+        #aside-container .menu-lateral .aside .opciones .parrafo {
+          margin-top: 10px;
+          margin-left: -75px;
+          font-size: .9em;
+          opacity: 0;
+          transition: all .3s; }
+        #aside-container .menu-lateral .aside .opciones .parrafo-vistas {
+          font-size: .9em;
+          text-align: start;
+          margin-left: -75px;
+          width: 180px;
+          opacity: 0;
+          transition: all .3s; }
+        #aside-container .menu-lateral .aside .opciones .parrafo-desarrollo {
+          text-align: start;
+          font-size: .9em;
+          margin-left: -75px;
+          opacity: 0;
+          transition: all .3s; }
+        #aside-container .menu-lateral .aside .opciones .final {
+          margin-top: -3px; }
+  #aside-container .menu-move {
     width: 200px;
-    margin: 10px auto;
-    align-items: center; }
-  .menu__lateral ul li:hover {
-    background: #678e69; }
-  .menu__lateral .parrafo {
-    display: flex;
-    margin: -20px 0 -5px 10px;
-    text-align: left; }
-  .menu__lateral .final {
-    margin-top: 50px; }
-  .menu__lateral li img,
-  .menu__lateral li .bx {
-    margin: auto 9px;
-    text-align: center; }
-  .menu__lateral .opciones {
-    margin-top: 30px; }
+    background-color: #A3C8A5; }
+    #aside-container .menu-move .flecha-container {
+      transform: translateX(140px); }
+      #aside-container .menu-move .flecha-container .desplegar .flecha {
+        transform: rotate(180deg); }
+    #aside-container .menu-move .aside {
+      overflow: visible; }
+      #aside-container .menu-move .aside .perfil {
+        opacity: 1;
+        margin-left: 5px;
+        width: 180px; }
+        #aside-container .menu-move .aside .perfil p {
+          font-size: .9rem; }
+          #aside-container .menu-move .aside .perfil p span {
+            font-size: 1rem;
+            font-weight: 600; }
+      #aside-container .menu-move .aside .opciones ul li {
+        background-color: #90AF9259; }
+      #aside-container .menu-move .aside .opciones .parrafo {
+        opacity: 1; }
+      #aside-container .menu-move .aside .opciones .parrafo-vistas {
+        opacity: 1;
+        width: 180px; }
+      #aside-container .menu-move .aside .opciones .parrafo-desarrollo {
+        opacity: 1; }
 
 * {
   padding: 0;
